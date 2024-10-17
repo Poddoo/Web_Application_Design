@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <style>     * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 40px;
+        background-color: #fff;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        height: 60px;
+    }
+
+    header h1 {
+        font-size: 1.6em; 
+        color: #000;
+        flex: 1;
+        text-align: center;
+        margin: 0;
+        padding: 18px;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        color: #f0eaea;
+    }
+
+    .left-nav, .right-nav {
+        display: flex; 
+        gap: 15px; 
+        padding: 22px;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #000;
+        font-weight: bold;
+        font-size: 0.9em;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 40px; 
+    }
+
+    .left-section {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        margin-left: 50px;
+        margin-top: 20px;
+        right: -60px;
+    }
+
+    .left-section h1 {
+        font-size: 2.2em;
+        color: #333;
+        margin-bottom: 15px; 
+        font-weight: bold;
+       
+        margin-left: 60px;
+    }
+
+    
+
+    .input-section {
+        margin-top: 15px;
+        display: flex;
+        gap: 5px;
+        position: relative;
+        z-index: 10;
+        background-color: rgb(229, 226, 226);
+        padding: 10px;
+        padding-left: 300;
+        border-radius: 0px;
+        box-shadow: 0 5px 15px rgba(126, 125, 125, 0.1);
+        top: -20px; 
+        right: -65px;
+    }
+
+    .input-section input {
+        width: 120px; 
+        padding: 6px; 
+        border: 0px solid #f0e7e7;
+        border-radius: 0px;
+        font-size: 0.9em; 
+        background-color: rgba(202, 197, 197, 0);
+    }
+
+    .input-section button {
+        padding: 8px 12px;
+        background-color: #FF5733;
+        color: #e8dfdf;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 0.8em;
+       
+       
+    }
+    .vertical-text {
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            font-size: 1.8em;
+            color: #cdc9c9;
+            position: absolute;
+            right: 180px;
+            bottom: -20px;
+            font-family:Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+
+       
+    .right-section {
+        width: 50%;
+        position: relative; 
+        display: flex;
+        justify-content: center;
+        right: 5%;
+    }
+
+    .main-image {
+        
+        width: 400px; 
+        
+       height: 500px;
+    }
+
+    .small-image {
+        position: absolute;
+        border-radius: 50%;
+        
+    }
+
+    .small-image-1 {
+        top: 30%; 
+        left: 80%; 
+        width: 200px; 
+        height: 200px;
+    }
+
+    .small-image-2 {
+        top: -10%; 
+       right: -50px;
+        width: 350px; 
+        height: 350px;
+    }
+
+    .small-image-3 {
+        top: 5%; 
+        right: -140px; 
+        width: 220px; 
+        height: 220px;
+    }
+
+    .logos-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px; 
+        margin-top: -30px; 
+        position: relative;
+        z-index: 1; 
+    }
+
+    .logos-container img {
+        width: 60px; 
+        height: 25px;
+    }
+
+    .avatars {
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+        margin-left: 50px;
+    }
+
+    .avatars img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        margin-right: -8px;
+        
+    }
+
+    .more {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px; 
+        height: 40px;
+        border-radius: 50%;
+        background-color: #00C9A7;
+        color: white;
+        font-size: 12px;
+        font-weight: bold;
+        border: 2px solid #fff;
+    }
+
+    .text {
+        font-size: 14px;
+        color: #555;
+    }
+        .second-page-container {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #baaeae;
+            color: #333;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px;
+            background-color: #fff;
+        }
+
+        .content {
+            display: flex;
+            max-width: 1200px;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: #fff;
+        }
+
+        .image-section {
+            position: relative;
+            flex: 1;
+            padding: 50px;
+        }
+
+        
+        .image-section img {
+            width: 80%;
+            height: auto;
+            border-top-left-radius: 50% 50%;
+            border-top-right-radius: 50% 50%;
+            object-fit: cover;
+            max-height: 450px; 
+        }
+
+        .calendar {
+    position: absolute; 
+    top: 70%; 
+    right: 15%; 
+    width: 100px; 
+    height: 100px;
+    background: none; 
+}
+
+.calendar img {
+    width: 100%; 
+    height: 100%;
+    object-fit: contain; 
+    
+} 
+       
+
+        .text-section {
+            flex: 1;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .text-section h1 {
+            font-size: 2.8em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #222;
+        }
+
+        .text-section p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .button-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .button-container a {
+            text-decoration: none;
+            padding: 12px 25px;
+            margin-right: 15px;
+            border-radius: 8px;
+            font-weight: bold;
+            color: white;
+            background-color: #f4623a;
+            transition: background-color 0.3s;
+            display: flex;
+            align-items: center;
+        }
+
+        .button-container a:hover {
+            background-color: #e1502d;
+        }
+
+        
+        .button-container .play-button {
+            background-color: transparent;
+            border: 2px solid #f4623a;
+            color: #f4623a;
+            transition: background-color 0.3s, color 0.3s;
+            display: flex;
+            align-items: center;
+        }
+
+        .button-container .play-button:hover {
+            background-color: #f4623a;
+            color: white;
+        }
+
+       
+        .button-container .play-button::before {
+            content: '▶';
+            margin-right: 8px;
+            font-size: 16px;
+            
+        }
+        .highlight {
+            color: #ff5733;
+           font-size: large; 
+        }
+   
+        
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="left-nav">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+            </div>
+            <h1 >1-Space</h1>
+            <div class="right-nav">
+                <a href="#">Services</a>
+                <a href="#">Events</a>
+                <a href="#">Spaces</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="left-section">
+            <h1>A new way to <br>revolutionise <br>your workspace<br> to yourself</h1>
+            <div class="input-section">
+                <input type="text" placeholder="City">
+                <input type="text" placeholder="Location">
+                <button>Schedule Visit</button>
+            </div>
+
+            <div class="avatars">
+                <img src="images/Ellipse 32.png" alt="Img 1">
+                <img src="images/Ellipse 33.png" alt="Img 2">
+                <img src="images/Ellipse 34.png" alt="Img 3">
+                <div class="more">+13</div>
+                <span class="text">16 people visit in last 24 hours</span>
+            </div>
+        </div>
+
+        <div class="right-section">
+            <img src="images/Mask Group.png" alt="Main Product" class="main-image">
+            <img src="images/Ellipse 2.png" alt="Small Image 1" class="small-image small-image-1">
+            <img src="images/Ellipse 1.png" alt="Small Image 2" class="small-image small-image-2">
+            <img src="images/Ellipse 3.png" alt="Small Image 3" class="small-image small-image-3">
+        </div>
+    </div>
+   
+
+    
+    <div class="vertical-text">Co Working</div>
+
+   
+    <section class="logos-container">
+        <img src="images/Google1.png" alt="Google">
+        <img src="images/slack.jpeg" alt="Slack">
+        <img src="images/Atlassian-Logo.png" alt="Atlassian">
+        <img src="images/dropbox.png" alt="Dropbox">
+        <img src="images/shopify.png" alt="Shopify">
+    </section>
+    <section class="second-page-container" id="secondPage">
+        <div class="container">
+            <div class="content">
+                
+                <div class="image-section">
+                    <img src="images/Mask Group (1).png" alt="Coworking Space">
+                    
+                    
+                    <div class="calendar">
+                        
+                        <img src="images/calendar.png" alt="Calendar Icon">
+                    </div>
+                </div>
+        
+                
+                <div class="text-section">
+                
+                    <h1> <span class="highlight">Services</span><br>Solutions designed for all your needs</h1>
+                    <p>
+                        Coworking is an arrangement in which workers of different companies share an office space, allowing cost savings and convenience through the use of common infrastructures, such as equipment, utilities, and receptionist and custodial services, and in some cases refreshments and parcel acceptance services.</p>
+                    <div class="button-container">
+                        <a href="#">View Availability</a>
+                        <a href="#" class="play-button">3D Tour of Space</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        </body>
+        </html>
+        
+
